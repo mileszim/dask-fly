@@ -24,7 +24,11 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = []
+dependencies = [
+  "dask~=2023.1.0",
+  "distributed~=2023.1.0",
+  "requests~=2.29.0"
+]
 
 [project.urls]
 Documentation = "https://github.com/mileszim/dask-fly#readme"
@@ -38,6 +42,9 @@ path = "src/dask_fly/__about__.py"
 dependencies = [
   "coverage[toml]>=6.5",
   "pytest",
+  "dask~=2023.1.0",
+  "distributed~=2023.1.0",
+  "requests~=2.29.0"
 ]
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
@@ -89,7 +96,7 @@ select = [
   "A",
   "ARG",
   "B",
-  "C",
+  # "C",
   "DTZ",
   "E",
   "EM",
@@ -106,7 +113,7 @@ select = [
   "Q",
   "RUF",
   "S",
-  "T",
+  # "T",
   "TID",
   "UP",
   "W",
